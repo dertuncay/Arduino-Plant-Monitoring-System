@@ -1,0 +1,13 @@
+[Unit]
+Description=Plant monitor service
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/pi/monitor
+ExecStart=python3 plant_monitor.py
+TimeoutStartSec=0
+Restart=always
+
+[Install]
+WantedBy=default.target
